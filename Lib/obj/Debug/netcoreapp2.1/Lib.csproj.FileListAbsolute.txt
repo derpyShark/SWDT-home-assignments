@@ -1,0 +1,9 @@
+D:\study\TROS\home assignments\Lab1\Lib\Lib\bin\Debug\netcoreapp2.1\Lib.deps.json
+D:\study\TROS\home assignments\Lab1\Lib\Lib\bin\Debug\netcoreapp2.1\Lib.dll
+D:\study\TROS\home assignments\Lab1\Lib\Lib\bin\Debug\netcoreapp2.1\Lib.pdb
+D:\study\TROS\home assignments\Lab1\Lib\Lib\obj\Debug\netcoreapp2.1\Lib.csprojAssemblyReference.cache
+D:\study\TROS\home assignments\Lab1\Lib\Lib\obj\Debug\netcoreapp2.1\Lib.csproj.CoreCompileInputs.cache
+D:\study\TROS\home assignments\Lab1\Lib\Lib\obj\Debug\netcoreapp2.1\Lib.AssemblyInfoInputs.cache
+D:\study\TROS\home assignments\Lab1\Lib\Lib\obj\Debug\netcoreapp2.1\Lib.AssemblyInfo.cs
+D:\study\TROS\home assignments\Lab1\Lib\Lib\obj\Debug\netcoreapp2.1\Lib.dll
+D:\study\TROS\home assignments\Lab1\Lib\Lib\obj\Debug\netcoreapp2.1\Lib.pdb
