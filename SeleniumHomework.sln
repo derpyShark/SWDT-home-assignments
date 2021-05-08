@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumHomework", "SeleniumHomework\SeleniumHomework.csproj", "{1DBCAF9A-E491-473B-91A4-51B213C0D6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumHomeworkTests", "SeleniumHomeworkTests\SeleniumHomeworkTests.csproj", "{24374310-64C7-4AD3-8F4F-EDB2D65915D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DBCAF9A-E491-473B-91A4-51B213C0D6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DBCAF9A-E491-473B-91A4-51B213C0D6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DBCAF9A-E491-473B-91A4-51B213C0D6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DBCAF9A-E491-473B-91A4-51B213C0D6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24374310-64C7-4AD3-8F4F-EDB2D65915D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24374310-64C7-4AD3-8F4F-EDB2D65915D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24374310-64C7-4AD3-8F4F-EDB2D65915D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24374310-64C7-4AD3-8F4F-EDB2D65915D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2217B57E-79E0-4035-B7B6-DF1D4BB4D001}
+	EndGlobalSection
+EndGlobal

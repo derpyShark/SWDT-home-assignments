@@ -1,0 +1,6 @@
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\SeleniumHomeworkTests.deps.json
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\SeleniumHomeworkTests.dll
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\obj\Debug\netcoreapp2.1\SeleniumHomeworkTests.csprojAssemblyReference.cache
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\obj\Debug\netcoreapp2.1\SeleniumHomeworkTests.csproj.CoreCompileInputs.cache
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\obj\Debug\netcoreapp2.1\SeleniumHomeworkTests.AssemblyInfoInputs.cache
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\obj\Debug\netcoreapp2.1\SeleniumHomeworkTests.AssemblyInfo.cs
