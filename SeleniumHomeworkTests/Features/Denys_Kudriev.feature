@@ -29,28 +29,50 @@ Scenario: Check searchbar with spaces
 	Then no search is done
 
 @scenario4
-Scenario: Check filter on our work page
-	Given I navigate to our work page
-	When I select industries and content types filters
-	Then I can see selected filter items
+Scenario Outline: Check length validation on contact us page
+	Given I navigate to contact us page
+	When I enter value with the length of '<Length>' in the '<Field>' field
+	Then I can see under the '<Field>' field '<Error Message>' error message
+
+	Examples:
+		| Field      |
+		| First Name |
+		| Last Name  |
 
 @scenario5
-Scenario: Check email validation on contact us page
+Scenario Outline: Check email validation on contact us page
 	Given I navigate to contact us page
-	When I enter some shitty value in the email field
-	Then I see email validation error
+	When I enter '<Value>' in the 'Email' field
+	Then I can see under the 'Email' field 'Incorrect email format' error message
+
+	Examples:
+		| Value      |
+		| First Name |
+		| Last Name  |
 
 @scenario6
-Scenario: Check phone validation on contact us page
+Scenario Outline: Check phone validation on contact us page
 	Given I navigate to contact us page
-	When I enter some shitty value in the phone field
-	Then I see phone validation error
+	When I enter '<Value>' in the 'Phone' field
+	Then I can see under the 'Phone' field 'Only digits, space, plus, and semicolon are allowed. Maximum number of characters is 50.' error message
+
+	Examples:
+		| Value  |
+		| pfasdf |
+		| grdl   |
 
 @scenario7
-Scenario: Check required fields on contact us page
+Scenario Outline: Check required fields on contact us page
 	Given I navigate to contact us page
-	When I enter nothing in the required fields
-	Then I see field required errors
+	When I enter '' in the '<Field>' field
+	Then I can see under the '<Field>' field 'This is a required field' error message
+
+	Examples:
+		| Field      |
+		| First Name |
+		| Last Name  |
+		| Email      |
+		| Phone      |
 
 @scenario8
 Scenario: Check FAQ collapsable paragraph on FAQ page

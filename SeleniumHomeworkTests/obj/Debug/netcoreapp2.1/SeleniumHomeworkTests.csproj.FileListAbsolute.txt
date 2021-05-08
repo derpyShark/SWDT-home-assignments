@@ -4,3 +4,17 @@ D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\obj\Debug\
 D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\obj\Debug\netcoreapp2.1\SeleniumHomeworkTests.csproj.CoreCompileInputs.cache
 D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\obj\Debug\netcoreapp2.1\SeleniumHomeworkTests.AssemblyInfoInputs.cache
 D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\obj\Debug\netcoreapp2.1\SeleniumHomeworkTests.AssemblyInfo.cs
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\nunit.engine.dll
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\nunit.engine.api.dll
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\nunit.engine.core.dll
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\SeleniumHomeworkTests.pdb
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\obj\Debug\netcoreapp2.1\SeleniumHomeworkTests.dll
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\obj\Debug\netcoreapp2.1\SeleniumHomeworkTests.pdb
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\testhost.exe
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\testhost.dll
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\Microsoft.TestPlatform.PlatformAbstractions.dll
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\SeleniumHomeworkTests.runtimeconfig.json
+D:\study\TROS\home assignments\SeleniumHomework\SeleniumHomeworkTests\bin\Debug\netcoreapp2.1\SeleniumHomeworkTests.runtimeconfig.dev.json
