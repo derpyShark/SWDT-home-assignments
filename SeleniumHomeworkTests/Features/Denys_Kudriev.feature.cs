@@ -73,20 +73,12 @@ namespace SeleniumHomeworkTests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 4
-#line hidden
-#line 5
- testRunner.Given("I am an Internet user navigating the https://www.epam.com/ website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Look for job")]
         [NUnit.Framework.CategoryAttribute("scenario1")]
         [NUnit.Framework.TestCaseAttribute("Software Testing Engineer", null)]
         [NUnit.Framework.TestCaseAttribute("Software Developer", null)]
+        [NUnit.Framework.TestCaseAttribute("oooga booga", null)]
         public virtual void LookForJob(string value, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -99,7 +91,7 @@ namespace SeleniumHomeworkTests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Value", value);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Look for job", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 8
+#line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -119,19 +111,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-#line 9
+#line 6
  testRunner.Given("I go to the job listing page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 10
+#line 7
  testRunner.When(string.Format("I enter into the keyword input bar \'{0}\'", value), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 11
+#line 8
  testRunner.And("I click on the Find button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
+#line 9
  testRunner.Then("I see the vacancies for this profession", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -147,7 +136,7 @@ this.FeatureBackground();
                     "scenario2"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check services highlighting", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 20
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -167,16 +156,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-#line 21
+#line 19
  testRunner.Given("I go to the services page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 22
+#line 20
  testRunner.When("I highlight consult", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 23
+#line 21
  testRunner.Then("I can see the text within", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -192,7 +178,7 @@ this.FeatureBackground();
                     "scenario3"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check searchbar with spaces", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 26
+#line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -212,16 +198,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-this.FeatureBackground();
+#line 25
+ testRunner.Given("I go to the search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 27
- testRunner.Given("I go to the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 28
+#line 26
  testRunner.When("I enter spaces in the searchbar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 29
+#line 27
  testRunner.Then("no search is done", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -231,9 +214,9 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Check length validation on contact us page")]
         [NUnit.Framework.CategoryAttribute("scenario4")]
-        [NUnit.Framework.TestCaseAttribute("First Name", null)]
-        [NUnit.Framework.TestCaseAttribute("Last Name", null)]
-        public virtual void CheckLengthValidationOnContactUsPage(string field, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("First Name", "51", "FIRST NAME SHOULD BE LESS THAN 50 CHARACTERS", null)]
+        [NUnit.Framework.TestCaseAttribute("Last Name", "51", "LAST NAME SHOULD BE LESS THAN 50 CHARACTERS", null)]
+        public virtual void CheckLengthValidationOnContactUsPage(string field, string length, string errorMessage, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "scenario4"};
@@ -244,8 +227,10 @@ this.FeatureBackground();
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Field", field);
+            argumentsOfScenario.Add("Length", length);
+            argumentsOfScenario.Add("Error Message", errorMessage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check length validation on contact us page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 32
+#line 30
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -265,17 +250,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-#line 33
+#line 31
  testRunner.Given("I navigate to contact us page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 34
- testRunner.When(string.Format("I enter value with the length of \'<Length>\' in the \'{0}\' field", field), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+ testRunner.When(string.Format("I enter value with the length of \'{0}\' in the \'{1}\' field", length, field), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 35
- testRunner.Then(string.Format("I can see under the \'{0}\' field \'<Error Message>\' error message", field), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 33
+ testRunner.Then(string.Format("I can see under the \'{0}\' field \'{1}\' error message", field, errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -284,8 +266,8 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Check email validation on contact us page")]
         [NUnit.Framework.CategoryAttribute("scenario5")]
-        [NUnit.Framework.TestCaseAttribute("First Name", null)]
-        [NUnit.Framework.TestCaseAttribute("Last Name", null)]
+        [NUnit.Framework.TestCaseAttribute("Phrefs", null)]
+        [NUnit.Framework.TestCaseAttribute("123adsfjkl", null)]
         public virtual void CheckEmailValidationOnContactUsPage(string value, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -298,7 +280,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Value", value);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check email validation on contact us page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 43
+#line 41
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -318,17 +300,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-#line 44
+#line 42
  testRunner.Given("I navigate to contact us page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 45
+#line 43
  testRunner.When(string.Format("I enter \'{0}\' in the \'Email\' field", value), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 46
- testRunner.Then("I can see under the \'Email\' field \'Incorrect email format\' error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 44
+ testRunner.Then("I can see under the \'Email\' field \'INCORRECT EMAIL FORMAT\' error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -351,7 +330,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Value", value);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check phone validation on contact us page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 54
+#line 52
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -371,18 +350,15 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-#line 55
+#line 53
  testRunner.Given("I navigate to contact us page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 56
+#line 54
  testRunner.When(string.Format("I enter \'{0}\' in the \'Phone\' field", value), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 57
- testRunner.Then("I can see under the \'Phone\' field \'Only digits, space, plus, and semicolon are al" +
-                        "lowed. Maximum number of characters is 50.\' error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 55
+ testRunner.Then("I can see under the \'Phone\' field \'ONLY DIGITS, SPACE, PLUS, AND SEMICOLON ARE AL" +
+                        "LOWED. MAXIMUM NUMBER OF CHARACTERS IS 50.\' error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -407,7 +383,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Field", field);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check required fields on contact us page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 65
+#line 63
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -427,17 +403,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-#line 66
+#line 64
  testRunner.Given("I navigate to contact us page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 67
+#line 65
  testRunner.When(string.Format("I enter \'\' in the \'{0}\' field", field), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 68
- testRunner.Then(string.Format("I can see under the \'{0}\' field \'This is a required field\' error message", field), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 66
+ testRunner.Then(string.Format("I can see under the \'{0}\' field \'THIS IS A REQUIRED FIELD\' error message", field), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -452,7 +425,7 @@ this.FeatureBackground();
                     "scenario8"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check FAQ collapsable paragraph on FAQ page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 78
+#line 76
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -472,17 +445,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-#line 79
+#line 77
  testRunner.Given("I navigate to the FAQ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 80
+#line 78
  testRunner.When("I click on the expandable plus icons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 81
- testRunner.Then("I see the content hidden within", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 79
+ testRunner.Then("I see that only one paragraph is expanded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

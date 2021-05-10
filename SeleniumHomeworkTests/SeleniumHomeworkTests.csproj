@@ -13,9 +13,4 @@
     <PackageReference Include="SpecFlow.NUnit" Version="3.7.38" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="PageContexts\" />
-  </ItemGroup>
-
 </Project>

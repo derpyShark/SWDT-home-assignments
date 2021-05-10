@@ -14,12 +14,8 @@ namespace SeleniumHomeworkTests.Steps
     {
         private ContactUsPage _contactUsPage = new ContactUsPage();
         private IWebDriver driver = new ChromeDriver(System.IO.Directory.GetCurrentDirectory());
-
-        [Given(@"I am an Internet user navigating the https://www\.epam\.com/ website")]
-        public void GivenIAmAnInternetUserNavigatingTheHttpsWww_Epam_ComWebsite()
-        {
-            driver.Url = "https://www.epam.com/about/who-we-are/contact";
-        }
+        private Random random = new Random();
+        
 
         [Given(@"I navigate to contact us page")]
         public void GivenINavigateToContactUsPage()
@@ -27,18 +23,30 @@ namespace SeleniumHomeworkTests.Steps
             driver.Url = "https://www.epam.com/about/who-we-are/contact";
         }
 
+        [When(@"I enter value with the length of '(.*)' in the '(.*)' field")]
+        public void WhenIEnterValueWithTheLengthOfInTheField(string number, string field)
+        {
+            int num = int.Parse(number);
+            FieldContainer container = GetFieldByName(field);
+            container.InputField.SendKeys(CreateString(num));
+            container.InputField.Submit();
+        }
+
         [When(@"I enter '(.*)' in the '(.*)' field")]
         public void WhenIEnterInTheField(string value, string field)
         {
             FieldContainer container = GetFieldByName(field);
             container.InputField.SendKeys(value);
+            container.InputField.Submit();
         }
 
         [Then(@"I can see under the '(.*)' field '(.*)' error message")]
         public void ThenICanSeeUnderTheFieldErrorMessage(string field, string message)
         {
             FieldContainer container = GetFieldByName(field);
-            Assert.AreEqual(message, container.ErrorLabel.Text, "Test failed");
+            string result = container.ErrorLabel.Text;
+            driver.Close();
+            Assert.AreEqual(message, result, "Test failed");
         }
 
         private FieldContainer GetFieldByName(string name)
@@ -71,6 +79,19 @@ namespace SeleniumHomeworkTests.Steps
                     };
             }
             return null;
+        }
+
+        private string CreateString(int stringLength)
+        {
+            const string allowedChars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789!@$?_-";
+            char[] chars = new char[stringLength];
+
+            for (int i = 0; i < stringLength; i++)
+            {
+                chars[i] = allowedChars[random.Next(0, allowedChars.Length)];
+            }
+
+            return new string(chars);
         }
     }
 
