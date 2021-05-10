@@ -17,7 +17,7 @@ namespace WebAPITesting
             request.AddHeader("Dropbox-API-Arg", "{\"mode\":\"add\",\"autorename\":false,\"mute\":false,\"path\":\"/uploadmeme.jpg\"}");
             request.AddHeader("Content-Type", "application/octet-stream");
 
-            byte[] data = File.ReadAllBytes("meme.jpg");
+            byte[] data = File.ReadAllBytes("../../../meme.jpg");
 
             request.AddParameter("application/octet-stream", data, ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
@@ -47,7 +47,7 @@ namespace WebAPITesting
             uploadRequest.AddHeader("Dropbox-API-Arg", "{\"mode\":\"add\",\"autorename\":false,\"mute\":false,\"path\":\"/deletememe.jpg\"}");
             uploadRequest.AddHeader("Content-Type", "application/octet-stream");
 
-            byte[] data = File.ReadAllBytes("meme.jpg");
+            byte[] data = File.ReadAllBytes("../../../meme.jpg");
 
             uploadRequest.AddParameter("application/octet-stream", data, ParameterType.RequestBody);
             IRestResponse uploadResponse = uploadClient.Execute(uploadRequest);
